@@ -28,10 +28,11 @@ export class DatabaseClient {
 	}
 
 	// register handles the creation of a new user
-	async register (email: string, password: string) {
+	async register (name: string, email: string, password: string) {
 		try {
 			// We provide only the minimum required fields by user create method
 			const result = await this.client.collection("users").create({
+				name,
 				email,
 				password,
 				passwordConfirm: password,

@@ -1,5 +1,9 @@
+"use client"
+
+import DashboardHomePage from "@/services/Dashboard/Views/Pages/DashboardHomePage";
+
 export default function DashboardPage(){
 	return (
-		<div>Dashboard Page</div>
+		<DashboardHomePage />
 	)
 }

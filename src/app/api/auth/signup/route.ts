@@ -3,8 +3,12 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
 	try {
-		const { email, password } = await request.json();
-		const result = await db.register(email, password);
+		const { name, email, password } = await request.json();
+		const result = await db.register(
+			name,
+			email,
+			password
+		);
 
 		return NextResponse.json(result);
 	} catch (err: any) {
