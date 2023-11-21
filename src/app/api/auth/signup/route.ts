@@ -9,7 +9,7 @@ export async function POST(request: Request) {
 			email,
 			password
 		);
-
+		console.log(`result`, result)
 		return NextResponse.json(result);
 	} catch (err: any) {
 		return new Response(

@@ -1,7 +1,6 @@
 "use client"
 
-import WelcomePageHeroSection from "../Components/WelcomePageHeroSection"
-
+import WelcomePageHeroSection from "@/services/Website/Views/Components/WelcomePageHeroSection";
 
 export default function WelcomePage(){
 	return (

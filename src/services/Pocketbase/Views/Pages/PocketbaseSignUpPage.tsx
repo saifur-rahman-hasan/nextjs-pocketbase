@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import React from 'react'
 import Link from "next/link";
 
-export default function PocketbaseLoginPage() {
+export default function PocketbaseSignUpPage() {
 	const route = useRouter();
 	const [name, setName] = React.useState<string>('');
 	const [email, setEmail] = React.useState<string>('');
@@ -26,9 +26,11 @@ export default function PocketbaseLoginPage() {
 				setError('Failed to authenticate user');
 				return;
 			};
+
 			const data = await response.json();
-			if (data?.token) {
-				route.push('/dashboard');
+
+			if (data?.id) {
+				route.push('/auth/signup/signup-success');
 			} else {
 				setError('Failed to authenticate user');
 			}
@@ -136,7 +138,7 @@ export default function PocketbaseLoginPage() {
 									type="submit"
 									className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
 								>
-									Sign in
+									Sign Up
 								</button>
 							</div>
 						</form>

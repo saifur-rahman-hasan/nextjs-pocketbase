@@ -10,18 +10,18 @@ import {
 } from "@heroicons/react/24/outline";
 import {Dialog, Transition} from "@headlessui/react";
 import {Fragment} from "react";
+import {PowerIcon} from "@heroicons/react/24/solid";
+import PBSignOutButton from "@/components/PBSignoutButton";
+import Link from "next/link";
 
 const navigation = [
-	{ name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-	{ name: 'Team', href: '#', icon: UsersIcon, current: false },
-	{ name: 'Projects', href: '#', icon: FolderIcon, current: false },
-	{ name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-	{ name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-	{ name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+	{ name: 'Dashboard', href: '/dashboard', icon: HomeIcon, current: true },
+	{ name: 'Projects', href: '/projects', icon: FolderIcon, current: false },
 ]
+
 const teams = [
-	{ id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-	{ id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
+	{ id: 1, name: 'Personal', href: '#', initial: 'H', current: false },
+	{ id: 2, name: 'Others', href: '#', initial: 'T', current: false },
 	{ id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
 ]
 
@@ -58,7 +58,7 @@ export function StaticSidebarForDesktop() {
 							<ul role="list" className="-mx-2 space-y-1">
 								{navigation.map((item) => (
 									<li key={item.name}>
-										<a
+										<Link
 											href={item.href}
 											className={clsx(
 												item.current
@@ -69,7 +69,7 @@ export function StaticSidebarForDesktop() {
 										>
 											<item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
 											{item.name}
-										</a>
+										</Link>
 									</li>
 								))}
 							</ul>
@@ -105,7 +105,18 @@ export function StaticSidebarForDesktop() {
 								<Cog6ToothIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
 								Settings
 							</a>
+
+							<a
+								href="#"
+								className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white"
+							>
+								<PowerIcon className="h-6 w-6 shrink-0" aria-hidden="true" />
+								Logout
+							</a>
+
+							<PBSignOutButton />
 						</li>
+
 					</ul>
 				</nav>
 			</div>
@@ -172,7 +183,7 @@ export function SidebarForMobile({ sidebarOpen, setSidebarOpen }: SidebarProps) 
 											<ul role="list" className="-mx-2 space-y-1">
 												{navigation.map((item) => (
 													<li key={item.name}>
-														<a
+														<Link
 															href={item.href}
 															className={clsx(
 																item.current
@@ -183,7 +194,7 @@ export function SidebarForMobile({ sidebarOpen, setSidebarOpen }: SidebarProps) 
 														>
 															<item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
 															{item.name}
-														</a>
+														</Link>
 													</li>
 												))}
 											</ul>

@@ -4,9 +4,11 @@ import db from "@/db";
 export async function middleware(request: NextRequest) {
 	// We print the request method and URL in the logs to see what's happening
 	console.log(`[middleware] ${request.method} ${request.url}`);
+
 	// To see more about db.isAuthenticated, check file src/db/index.ts
 	const isLoggedIn = await db.isAuthenticated(request.cookies as any);
 	if (request.nextUrl.pathname && request.nextUrl.pathname.startsWith("/auth")) {
+
 		// If already logged in and the request is to go to the login page,
 		// Skip it and redirect to the home page.
 		if (isLoggedIn) {

@@ -4,13 +4,18 @@ import db from "@/db";
 import clsx from "clsx";
 
 export default function PBSignOutButton(){
+
+	const handleSignOutClick = async () => {
+		const signOutResponse = await db.signOut()
+
+		console.log(`signOutResponse`, signOutResponse)
+
+	}
+
+
 	return (
 		<button
-			onClick={async () => {
-				if(await db.signOut()){
-
-				}
-			}}
+			onClick={handleSignOutClick}
 			className={clsx(
 				'w-full text-left ',
 				'hover:bg-gray-50',

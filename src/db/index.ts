@@ -37,6 +37,7 @@ export class DatabaseClient {
 				password,
 				passwordConfirm: password,
 			});
+console.log(`result`, result)
 
 			return result;
 		} catch (err) {
@@ -69,7 +70,7 @@ export class DatabaseClient {
 	}
 
 	async signOut() {
-		await this.client.authStore.clear();
+		this.client.authStore.clear();
 		return true
 	}
 }
