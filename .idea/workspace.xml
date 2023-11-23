@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c886b546-95d2-40a6-bfb7-abd5099fd7d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/auth/signup/signup-success/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseSignUpSuccessPage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Projects/Models/ProjectModel.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/auth/me/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/projects/[projectId]/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Alert.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/core/ApiResponse.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/auth/signup/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/signup/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/posts/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/projects/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PBSignoutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PBSignoutButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sidebar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/projects/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/projects/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/db/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/db/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/middleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/middleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Dashboard/Views/Components/DashboardLayoutComponents.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Dashboard/Views/Components/DashboardLayoutComponents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseLoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseLoginPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseSignUpPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseSignUpPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseSignUpSuccessPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseSignUpSuccessPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Projects/Views/Pages/ProjectListPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Views/Pages/ProjectListPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Website/Views/Pages/WelcomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Website/Views/Pages/WelcomePage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,24 +46,26 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/src/services/Pocketbase/Views/Pages&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/src/core",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages" />
       <recent name="$PROJECT_DIR$/src/app/projects" />
       <recent name="$PROJECT_DIR$/src/app/auth/signup" />

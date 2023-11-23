@@ -3,6 +3,8 @@
 import { useRouter } from 'next/navigation';
 import React from 'react'
 import Link from "next/link";
+import { BrandLogo } from "@/components/core/BrandLogo";
+import {AlertError} from "@/components/Alert";
 
 export default function PocketbaseSignUpPage() {
 	const route = useRouter();
@@ -22,14 +24,15 @@ export default function PocketbaseSignUpPage() {
 				headers: {'Content-Type': 'application/json'},
 				body: JSON.stringify(form)
 			});
+
 			if (!response.ok) {
 				setError('Failed to authenticate user');
 				return;
-			};
+			}
 
 			const data = await response.json();
 
-			if (data?.id) {
+			if (data?.data?.id) {
 				route.push('/auth/signup/signup-success');
 			} else {
 				setError('Failed to authenticate user');
@@ -41,14 +44,10 @@ export default function PocketbaseSignUpPage() {
 
 	return (
 		<>
-
-			<div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+			<div className="bg-gray-100 flex min-h-screen flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
 				<div className="sm:mx-auto sm:w-full sm:max-w-md">
-					<img
-						className="mx-auto h-10 w-auto"
-						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-						alt="Your Company"
-					/>
+					<BrandLogo />
+
 					<h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
 						Sign in to your account
 					</h2>
@@ -113,26 +112,6 @@ export default function PocketbaseSignUpPage() {
 								</div>
 							</div>
 
-							<div className="flex items-center justify-between">
-								<div className="flex items-center">
-									<input
-										id="remember-me"
-										name="remember-me"
-										type="checkbox"
-										className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-									/>
-									<label htmlFor="remember-me" className="ml-3 block text-sm leading-6 text-gray-900">
-										Remember me
-									</label>
-								</div>
-
-								<div className="text-sm leading-6">
-									<a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-										Forgot password?
-									</a>
-								</div>
-							</div>
-
 							<div>
 								<button
 									type="submit"
@@ -143,7 +122,15 @@ export default function PocketbaseSignUpPage() {
 							</div>
 						</form>
 
-						{error && <p className='error'>{error}</p>}
+						{error && (
+							<div className={'my-4'}>
+								<AlertError
+									hasError={!!error?.length}
+									error={error}
+								/>
+							</div>
+						)}
+
 
 						<div>
 							<div className="relative mt-10">

@@ -3,6 +3,8 @@
 import { useRouter } from 'next/navigation';
 import React from 'react'
 import Link from "next/link";
+import { BrandLogo } from "@/components/core/BrandLogo";
+import {AlertError} from "@/components/Alert";
 
 
 export default function PocketbaseLoginPage() {
@@ -27,9 +29,10 @@ export default function PocketbaseLoginPage() {
 				console.log('response', )
 				setError(errorResponse.error);
 				return;
-			};
+			}
+
 			const data = await response.json();
-			if (data?.token) {
+			if (data?.data?.token) {
 				route.push('/dashboard');
 			} else {
 				setError('Failed to authenticate user');
@@ -41,14 +44,9 @@ export default function PocketbaseLoginPage() {
 
 	return (
 		<>
-
-			<div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+			<div className="bg-gray-100 flex min-h-screen flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
 				<div className="sm:mx-auto sm:w-full sm:max-w-md">
-					<img
-						className="mx-auto h-10 w-auto"
-						src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-						alt="Your Company"
-					/>
+					<BrandLogo />
 					<h2 className="mt-6 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
 						Sign in to your account
 					</h2>
@@ -124,7 +122,14 @@ export default function PocketbaseLoginPage() {
 							</div>
 						</form>
 
-						{error && <p className='error'>{error}</p>}
+						{error && (
+							<div className={'my-4'}>
+								<AlertError
+									hasError={!!error?.length}
+									error={error}
+								/>
+							</div>
+						)}
 
 						<div>
 							<div className="relative mt-10">
