@@ -1,18 +1,14 @@
 import {initPocketBase} from "@/db";
 import ApiResponse from "@/core/ApiResponse";
 import {NextRequest, NextResponse} from "next/server";
+import ProjectCRUDController from "@/services/Projects/Controllers/ProjectCRUDController";
+
 
 export async function GET(request: NextRequest, response: NextResponse) {
 	try {
-		const pb = await initPocketBase(request, response)
 
-		// you can also fetch all records at once via getFullList
-		const records = await pb.collection('projects')
-			.getFullList({
-				sort: '-created',
-			});
-
-		return ApiResponse.success(records)
+		const controller = new ProjectCRUDController(request, response)
+		return await controller.index()
 
 	}catch (e: any) {
 		return ApiResponse.error(e)
@@ -41,6 +37,3 @@ export async function POST(request: NextRequest, response: NextResponse) {
 		return ApiResponse.error(e)
 	}
 }
-
-
-

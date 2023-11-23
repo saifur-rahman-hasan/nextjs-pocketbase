@@ -4,6 +4,7 @@ import ApiResponse from "@/core/ApiResponse";
 
 export async function POST(request: Request) {
 	try {
+
 		const { identity, password } = await request.json();
 		const result = await db.authenticate(identity, password);
 		const {record, token} = result;
