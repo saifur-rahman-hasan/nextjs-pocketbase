@@ -1,6 +1,6 @@
 import ApiResponse from "@/core/ApiResponse";
 import {NextRequest, NextResponse} from "next/server";
-import {initPocketBase} from "@/db";
+import ProjectCRUDController from "@/services/Projects/Controllers/ProjectCRUDController";
 
 export async function GET(
 	request: NextRequest,
@@ -8,13 +8,11 @@ export async function GET(
 	response: NextResponse
 ) {
 	try {
+
 		const projectId = params.projectId
-		const pb = await initPocketBase(request, response)
+		const controller = new ProjectCRUDController(request, response)
 
-		// you can also fetch a record by calling getOne
-		const record = await pb.collection('projects').getOne(projectId);
-
-		return ApiResponse.success(record)
+		return await controller.show(projectId)
 
 	}catch (e: any) {
 		return ApiResponse.error(e)
@@ -30,20 +28,9 @@ export async function PUT(
 ) {
 	try {
 		const projectId = params.projectId
-		const reqData = await request.json()
-		const pb = await initPocketBase(request, response)
+		const controller = new ProjectCRUDController(request, response)
 
-		// you can also fetch a record by calling getOne
-		const record = await pb.collection('projects').getOne(projectId);
-		let updatableRecordData = {
-			name: reqData?.name || record.name,
-			status: reqData?.status || record.status,
-		}
-
-		const updatedRecord = await pb.collection('projects')
-			.update(projectId, updatableRecordData)
-
-		return ApiResponse.success(updatedRecord)
+		return await controller.update(projectId)
 
 	}catch (e: any) {
 		return ApiResponse.error(e)
@@ -57,10 +44,9 @@ export async function DELETE(
 ) {
 	try {
 		const projectId = params.projectId
-		const pb = await initPocketBase(request, response)
-		await pb.collection('projects').delete(projectId);
+		const controller = new ProjectCRUDController(request, response)
 
-		return ApiResponse.deleted()
+		return await controller.delete(projectId)
 
 	}catch (e: any) {
 		return ApiResponse.error(e)

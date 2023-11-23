@@ -26,46 +26,76 @@ export default class ProjectCRUDController extends ApiController implements CRUD
 				});
 
 			return ApiResponse.success(records)
-
-			return ApiResponse.success(query)
 		}catch (e) {
 			return ApiResponse.error(e)
 		}
 	}
 
-	async create() {
+	async store() {
 		try {
-			const requestData = await this.getReqData()
+			const requestData: any = await this.getReqData()
+			const pb = await this.getPocketbase()
 
-			return ApiResponse.created(this.getReqBody())
+			const recordData = {
+				name: requestData.name,
+				status: requestData.status,
+				createdBy: pb.authStore.model?.id
+			}
+
+			// you can also fetch all records at once via getFullList
+			const newRecord = await pb.collection('projects')
+				.create(recordData);
+
+			return ApiResponse.success(newRecord)
+
 		}catch (e) {
 			return ApiResponse.error(e)
 		}
 	}
 
 
-	async show() {
+	async show(id: string) {
 		try {
-			const requestData = await this.getReqData(true)
+			const pb = await this.getPocketbase()
 
-			return ApiResponse.success(requestData)
+			// you can also fetch a record by calling getOne
+			const record = await pb.collection('projects')
+				.getOne(id);
+
+			return ApiResponse.success(record)
+
 		}catch (e) {
 			return ApiResponse.error(e)
 		}
 	}
 
-	async update() {
+	async update(id: string) {
 		try {
-			const requestData = await this.getReqData(true)
-			return ApiResponse.success(requestData)
+			const requestData: any = await this.getReqData(true)
+			const pb = await this.getPocketbase()
+
+			const record = await pb.collection('projects')
+				.getOne(id);
+
+			let updatableRecordData = {
+				name: requestData?.name || record.name,
+				status: requestData?.status || record.status,
+			}
+
+			const updatedRecord = await pb.collection('projects')
+				.update(id, updatableRecordData)
+
+			return ApiResponse.success(updatedRecord)
 		}catch (e) {
 			return ApiResponse.error(e)
 		}
 	}
 
-	async delete() {
+	async delete(id: string) {
 		try {
-			const requestData = await this.getReqData(true)
+			const pb = await this.getPocketbase()
+			await pb.collection('projects').delete(id);
+
 			return ApiResponse.deleted()
 		}catch (e) {
 			return ApiResponse.error(e)

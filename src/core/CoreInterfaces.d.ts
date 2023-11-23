@@ -2,8 +2,8 @@ import {initPocketBase} from "@/db";
 
 interface CRUDApiMethods {
 	index(): any
-	create(): any;
-	show(): any;
-	update(): any;
-	delete(): any;
+	store(): any;
+	show(id: any): any;
+	update(id: any): any;
+	delete(id: any): any;
 }

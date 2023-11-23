@@ -35,7 +35,7 @@ class ApiResponse {
 	}
 
 	static deleted() {
-		return this.json({ success: true }, { status: 204 });
+		return this.json({ success: true, message: 'Resource Deleted' }, { status: 200 });
 	}
 
 	static unauthorized() {

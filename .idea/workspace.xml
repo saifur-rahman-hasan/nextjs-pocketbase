@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c886b546-95d2-40a6-bfb7-abd5099fd7d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/core/ApiController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/BaseAction.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/CoreInterfaces.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/core/RepositoryQueryInterface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Pocketbase/Controllers/PocketbaseAuthController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectCRUDController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Projects/Repositories/ProjectCRUDRepository.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/projects/[projectId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/projects/[projectId]/route.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/api/projects/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/projects/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ApiResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ApiResponse.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/CoreInterfaces.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/CoreInterfaces.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectCRUDController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectCRUDController.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
