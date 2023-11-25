@@ -1,17 +1,12 @@
 import {ApiController} from "@/core/ApiController";
 import {NextRequest, NextResponse} from "next/server";
 import ApiResponse from "@/core/ApiResponse";
-import {initPocketBase} from "@/db";
 import {CRUDApiMethods} from "@/core/CoreInterfaces";
 
 export default class ProjectCRUDController extends ApiController implements CRUDApiMethods{
 
 	constructor(request: NextRequest, response: NextResponse) {
 		super(request, response);
-	}
-
-	async getPocketbase() {
-		return await initPocketBase(this.request, this.response)
 	}
 
 	async index() {
@@ -37,8 +32,8 @@ export default class ProjectCRUDController extends ApiController implements CRUD
 			const pb = await this.getPocketbase()
 
 			const recordData = {
-				name: requestData.name,
-				status: requestData.status,
+				name: requestData.projectName,
+				status: requestData.projectStatus,
 				createdBy: pb.authStore.model?.id
 			}
 

@@ -1,17 +1,15 @@
-import db from "@/db";
-import { cookies } from 'next/headers';
 import ApiResponse from "@/core/ApiResponse";
+import PocketbaseAuthController from "@/services/Pocketbase/Controllers/PocketbaseAuthController";
+import {NextRequest, NextResponse} from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(
+	request: NextRequest,
+	response: NextResponse
+) {
 	try {
 
-		const { identity, password } = await request.json();
-		const result = await db.authenticate(identity, password);
-		const {record, token} = result;
-		record.token = token;
-		cookies().set('pb_auth', db.client.authStore.exportToCookie());
+		return await (new PocketbaseAuthController(request, response)).login()
 
-		return ApiResponse.success(record, 'You are logged in')
 	} catch (err: any) {
 		return ApiResponse.error(err)
 	}

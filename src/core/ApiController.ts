@@ -1,4 +1,5 @@
 import {NextRequest, NextResponse} from "next/server";
+import {initPocketBase} from "@/db";
 
 export abstract class ApiController {
 	protected request: NextRequest
@@ -50,6 +51,10 @@ export abstract class ApiController {
 
 	validateRequest() {
 
+	}
+
+	async getPocketbase() {
+		return await initPocketBase(this.request, this.response)
 	}
 }
 

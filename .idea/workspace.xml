@@ -5,12 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c886b546-95d2-40a6-bfb7-abd5099fd7d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/card/CardHeading.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/FormSubmitButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/InputEmail.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/InputPassword.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/InputRememberMe.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/form/InputText.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/loaders/LoadingCircle.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/modal/ModalBackdrop.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Components/FormComponents.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Components/PocketbaseLoginForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Projects/Views/Components/FormProjectCreate.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Projects/Views/Components/ProjectComponents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/projects/[projectId]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/projects/[projectId]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/projects/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/projects/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ApiResponse.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ApiResponse.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/CoreInterfaces.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/CoreInterfaces.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Alert.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PBSignoutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PBSignoutButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/ApiController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ApiController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Pocketbase/Controllers/PocketbaseAuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Pocketbase/Controllers/PocketbaseAuthController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseLoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseLoginPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectCRUDController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectCRUDController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Projects/Views/Components/ButtonCreateNewProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Views/Components/ButtonCreateNewProject.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/Projects/Views/Pages/ProjectListPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Views/Pages/ProjectListPage.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +36,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -43,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/src/services/Projects/Controllers",
+    "last_opened_file_path": "/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/src/components/form",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,11 +72,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/form" />
       <recent name="$PROJECT_DIR$/src/services/Projects/Controllers" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/core" />
       <recent name="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages" />
-      <recent name="$PROJECT_DIR$/src/app/projects" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/core" />
@@ -80,6 +96,8 @@
       <workItem from="1700569847169" duration="1093000" />
       <workItem from="1700575152020" duration="223000" />
       <workItem from="1700575468217" duration="3790000" />
+      <workItem from="1700755043101" duration="539000" />
+      <workItem from="1700789184467" duration="15927000" />
     </task>
     <servers />
   </component>

@@ -2,16 +2,17 @@
 
 import db from "@/db";
 import clsx from "clsx";
+import React, {useEffect} from "react";
 
 export default function PBSignOutButton(){
+	const [reload, setReload] = React.useState<boolean>(false)
 
 	const handleSignOutClick = async () => {
+		setReload(true)
 		const signOutResponse = await db.signOut()
-
-		console.log(`signOutResponse`, signOutResponse)
-
 	}
 
+	useEffect(() => {}, [reload])
 
 	return (
 		<button
