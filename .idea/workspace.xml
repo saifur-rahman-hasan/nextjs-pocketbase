@@ -5,28 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c886b546-95d2-40a6-bfb7-abd5099fd7d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/card/CardHeading.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/FormSubmitButton.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/InputEmail.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/InputPassword.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/InputRememberMe.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/form/InputText.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/loaders/LoadingCircle.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/modal/ModalBackdrop.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Components/FormComponents.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Components/PocketbaseLoginForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Projects/Views/Components/FormProjectCreate.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/Projects/Views/Components/ProjectComponents.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/auth/login/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Alert.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Alert.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PBSignoutButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PBSignoutButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/ApiController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/core/ApiController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Pocketbase/Controllers/PocketbaseAuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Pocketbase/Controllers/PocketbaseAuthController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseLoginPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Pocketbase/Views/Pages/PocketbaseLoginPage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectCRUDController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Controllers/ProjectCRUDController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Projects/Views/Components/ButtonCreateNewProject.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Views/Components/ButtonCreateNewProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/Projects/Views/Pages/ProjectListPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/Projects/Views/Pages/ProjectListPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,23 +33,23 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/src/components/form",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "editing.templates",
-    "ts.external.directory.path": "/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/src/components/form&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/saifurrahman/Code/github_projects/next-pocketbase-auth/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components/form" />
@@ -97,7 +77,8 @@
       <workItem from="1700575152020" duration="223000" />
       <workItem from="1700575468217" duration="3790000" />
       <workItem from="1700755043101" duration="539000" />
-      <workItem from="1700789184467" duration="15927000" />
+      <workItem from="1700789184467" duration="16065000" />
+      <workItem from="1700916886298" duration="3182000" />
     </task>
     <servers />
   </component>
