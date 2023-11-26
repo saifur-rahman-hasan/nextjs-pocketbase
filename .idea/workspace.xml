@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c886b546-95d2-40a6-bfb7-abd5099fd7d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Actions/UserAccountPasswordResetAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Actions/UserCreateAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Actions/UserUpdateAction.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Controllers/ACLController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Controllers/AuthController.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Components/ComponentProps.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Components/FormAuthLogin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Components/FormAuthRegister.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Components/FormUserCreate.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Pages/AuthAccountPasswordChangePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Pages/AuthLoginPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Pages/AuthPasswordResetPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Pages/AuthRegisterPage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/Auth/Views/Pages/PageProps.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +29,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
+        <option value="JavaScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -78,7 +92,7 @@
       <workItem from="1700575468217" duration="3790000" />
       <workItem from="1700755043101" duration="539000" />
       <workItem from="1700789184467" duration="16065000" />
-      <workItem from="1700916886298" duration="3182000" />
+      <workItem from="1700916886298" duration="6036000" />
     </task>
     <servers />
   </component>
